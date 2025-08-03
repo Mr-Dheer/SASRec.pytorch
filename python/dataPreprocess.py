@@ -9,17 +9,17 @@ def parse(path):
   for l in g:
     yield json.loads(l)
 
-# Location of the dataset
-datasetLocation = '/home/kavach/Dev/NewResearch/E2P/sasRec/SASRec.pytorch/python/data/raw/Magazine_Subscriptions_5.json.gz'
+# NOTE Location of the dataset
+datasetLocation = '/home/kavach/Dev/NewResearch/E2P/sasRec/SASRec.pytorch/python/data/raw/Magazine_Subscriptions.json.gz'
 
 countU = defaultdict(lambda: 0)
 countP = defaultdict(lambda: 0)
 line = 0
 
-# Add the name of the dataSet
+# NOTE Add the name of the dataSet
 dataset_name = 'Magazine_Subscriptions'
 
-# change the location here also if needed
+# NOTE change the location here also if needed
 f = open('/home/kavach/Dev/NewResearch/E2P/sasRec/SASRec.pytorch/python/data/'+'reviews_' + dataset_name + '.txt', 'w')
 for l in parse(datasetLocation):
     line += 1
@@ -65,7 +65,7 @@ for userid in User.keys():
 
 print(usernum, itemnum)
 
-# Add the location below of where to save the file
+# NOTE Add the location below of where to save the file
 f = open('/home/kavach/Dev/NewResearch/E2P/sasRec/SASRec.pytorch/python/data/' + dataset_name +'.txt', 'w')
 for user in User.keys():
     for i in User[user]:
